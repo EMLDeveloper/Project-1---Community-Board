@@ -1,0 +1,112 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.app {
+  flex: 1;
+  font-family: "Segoe UI", sans-serif;
+  padding: 2rem;
+  background: linear-gradient(to right, #f8f8f8, #edeaea);
+  min-height: 100vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Orbitron", sans-serif;
+  font-size: 3.8rem;
+  background-color: #000000;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 3px rgba(1, 41, 116, 0.1);
+  font-family: "Lobster", sans-serif;
+}
+
+span {
+  font-size: 3rem;
+}
+h3 {
+  color: #ffffff;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: stretch;
+  max-width: 1600px;
+  margin: 0 auto;
+  border: 5px ridge #000000;
+  padding: 3rem;
+}
+
+.Up {
+  display: flex;
+  justify-content: center;
+  font-size: 8rem; /* Optional: make emojis larger */
+  padding: 0 1rem; /* Optional: add spacing from the edges */
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.emoji {
+  margin-left: 1rem;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .title {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .emoji {
+    font-size: 1.8rem;
+  }
+
+  .Up {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-grid {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .emoji {
+    font-size: 1.5rem;
+  }
+
+  .Up {
+    font-size: 3rem;
+  }
+}
